@@ -40,23 +40,23 @@ public class Sponge {
   public static String spongeCase(String sentence) {
     List<String> list = new ArrayList<>(); // created an empty ArrayList
 
-    String newString = ""; //created newString to hold the manipulated sentence
+    String newString = ""; // created newString to hold the manipulated sentence
 
     list.add(sentence); // Adding the string to the list
 
     
-    for (int i = 0; i < sentence.length(); i++) {
-      if (i % 2 != 0) {
-        char upperChar = Character.toUpperCase(sentence.charAt(i));
-        newString += upperChar;
+    for (int i = 0; i < sentence.length(); i++) { // looping through the length of sentence
+      if (i % 2 != 0) { // if index at i modulus 2 is not even 
+        char upperChar = Character.toUpperCase(sentence.charAt(i)); // take the character at that index and upper case it
+        newString += upperChar; //append to the newString
         
       } else {
-        char lowerChar = Character.toLowerCase(sentence.charAt(i));
-        newString += lowerChar;
+        char lowerChar = Character.toLowerCase(sentence.charAt(i)); //take the character at that index and lower case it
+        newString += lowerChar; //appedn to the new string
       }
     }
 
-    return newString;
+    return newString; //return newString
   }
 
 
