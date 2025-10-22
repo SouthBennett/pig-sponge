@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sponge {
 
   /*
@@ -29,10 +32,18 @@ public class Sponge {
     assertEqual(4, spongeCase("debí tirar más fotos"), "dEbÍ tIrAr mÁs fOtOs");
     assertEqual(5, spongeCase("E"), "e");
     assertEqual(6, spongeCase("e"), "e");
+
+
   }
 
   // Implement your solution here!
   public static String spongeCase(String sentence) {
+    List<String> list = new ArrayList<>(); // created an empty ArrayList
+
+    String newString = ""; //created newString to hold the manipulated sentence
+
+    list.add(sentence); // Adding the string to the list
+
     return null;
   }
 
