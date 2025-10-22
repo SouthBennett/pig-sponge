@@ -44,7 +44,19 @@ public class Sponge {
 
     list.add(sentence); // Adding the string to the list
 
-    return null;
+    
+    for (int i = 0; i < sentence.length(); i++) {
+      if (i % 2 != 0) {
+        char upperChar = Character.toUpperCase(sentence.charAt(i));
+        newString += upperChar;
+        
+      } else {
+        char lowerChar = Character.toLowerCase(sentence.charAt(i));
+        newString += lowerChar;
+      }
+    }
+
+    return newString;
   }
 
 
