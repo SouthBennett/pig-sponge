@@ -39,19 +39,24 @@ public class Sponge {
   // Implement your solution here!
   public static String spongeCase(String sentence) {
 
-    String newString = ""; // created newString to hold the manipulated sentence
+    String newString = ""; // created newString to hold the built sentence
 
-    boolean upper = false; //track when to uppercase; reets after spacec
+    boolean upper = false; //track when to uppercase; reets after spaces
 
     
     for (int i = 0; i < sentence.length(); i++) { // looping through the length of sentence
-      if (i % 2 != 0) { // if index at i modulus 2 is not even 
-        char upperChar = Character.toUpperCase(sentence.charAt(i)); // take the character at that index and upper case it
-        newString += upperChar; //append to the newString
-        
+      char c = sentence.charAt(i);
+
+      if (c == ' ') { 
+        newString += c; //append the space to the newString   
+        upper = false; //reset for the next word
       } else {
-        char lowerChar = Character.toLowerCase(sentence.charAt(i)); //take the character at that index and lower case it
-        newString += lowerChar; //appedn to the new string
+          if (upper) {
+            newString += Character.toUpperCase(c);
+          } else {
+            newString += Character.toLowerCase(c);
+          }
+          upper = !upper; //flip the flag for the next character
       }
     }
 
