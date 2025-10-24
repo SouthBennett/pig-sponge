@@ -38,11 +38,10 @@ public class Sponge {
 
   // Implement your solution here!
   public static String spongeCase(String sentence) {
-    List<String> list = new ArrayList<>(); // created an empty ArrayList
 
     String newString = ""; // created newString to hold the manipulated sentence
 
-    list.add(sentence); // Adding the string to the list
+    boolean upper = false; //track when to uppercase; reets after spacec
 
     
     for (int i = 0; i < sentence.length(); i++) { // looping through the length of sentence
