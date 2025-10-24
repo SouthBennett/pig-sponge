@@ -41,20 +41,20 @@ public class Sponge {
 
     String newString = ""; // created newString to hold the built sentence
 
-    boolean upper = false; //track when to uppercase; reets after spaces
+    boolean upper = false; //track when to uppercase; resets after spaces
 
     
     for (int i = 0; i < sentence.length(); i++) { // looping through the length of sentence
-      char c = sentence.charAt(i);
+      char c = sentence.charAt(i); // gets the current character at position i
 
       if (c == ' ') { 
         newString += c; //append the space to the newString   
         upper = false; //reset for the next word
       } else {
-          if (upper) {
-            newString += Character.toUpperCase(c);
+          if (upper) { // if the flag i true
+            newString += Character.toUpperCase(c); // uppercase current character
           } else {
-            newString += Character.toLowerCase(c);
+            newString += Character.toLowerCase(c); // lowercase current character
           }
           upper = !upper; //flip the flag for the next character
       }
